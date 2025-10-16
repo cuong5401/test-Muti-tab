@@ -1,0 +1,49 @@
+* {
+      margin: 0;
+      padding: 0;
+      outline: none;
+      box-sizing: border-box;
+
+}
+
+body {}
+
+.btn-phone {
+      display: inline-flex;
+      cursor: pointer;
+}
+
+.btn-dis {
+      position: relative;
+      display: inline-block;
+      width: 42px;
+      height: 22px;
+      background-color: #f5f5f5;
+      border: 1px solid rgb(161, 175, 175);
+      border-radius: 999px;
+      transition: ease .4s;
+      cursor: inherit;
+}
+
+.btn-dis::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-color: #FFF;
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+      border-radius: 50%;
+      transition: ease .3s;
+}
+
+.btn-phone [type="checkbox"]:checked+.btn-dis {
+      background-color: #32ea3e;
+      border-color: #32ea3e;
+}
+
+.btn-phone [type="checkbox"]:checked+.btn-dis::before {
+      transform: translateX(20px);
+      background-color: rgb(247, 250, 250);
+
+}
